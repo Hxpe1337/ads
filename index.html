@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Milionerzy</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <video autoplay loop muted playsinline id="background-video">
+    <source src="BARCELONA.mp4" type="video/mp4">
+  </video>
+
+<div class="container">
+  <div id="nickname-form">
+    <button onclick="startGame()">Start</button>
+  </div>
+  <div id="message-container" style="display: none;">
+    <img src="sad.png" alt="smutny" style="width: 200px;">
+    <p id="message-text"></p>
+    <button onclick="restartGame()">Spróbuj ponownie</button>
+  </div>
+  
+  <div class="quiz-container" style="display: none;">
+    <div id="quiz">
+      <div class="progress" id="progress">Odpowiedziano 0 z 0 pytań</div>
+      <img src="img.png" alt="Special Image" id="special-image" style="display: none;">
+
+      <h2 id="question">Pytanie?</h2>
+      <div class="buttons">
+        <button class="answer-btn" onclick="selectAnswer(0)">Odp A</button>
+        <button class="answer-btn" onclick="selectAnswer(1)">Odp B</button>
+        <button class="answer-btn" onclick="selectAnswer(2)">Odp C</button>
+        <button class="answer-btn" onclick="selectAnswer(3)">Odp D</button>
+      </div>
+    </div>
+    <div  style="margin-top: 25px;" id="lives-container">
+      <span id="lives"></span>
+    </div>
+  </div>
+</div>
+<div id="glow-effect"></div>
+<div id="correct-effect"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
